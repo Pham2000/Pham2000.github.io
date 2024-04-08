@@ -3,30 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Tri Pham Portfolio</title>
     <style>
+        /* Reset */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
             margin: 0;
             padding: 0;
         }
+
+        /* Header */
         header {
             background-color: #333;
             color: #fff;
             padding: 20px;
             text-align: center;
         }
+
+        /* Content styles */
         main {
             padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
             text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+
+        /* Image */
+        .profile-image {
+            border-radius: 50%; /* image rounding */
+            width: 200px;
+            height: 200px;
+            object-fit: cover; /* image fit */
+            margin-bottom: 20px; /* make it look nice */
+            border: 5px solid #fff; /* border */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Make it sleek*/
+        }
+
+        /* Mission*/
+        .mission {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        /* Projects*/
+        .projects {
+            list-style: none;
+            padding: 0;
+        }
+
+        .projects li {
+            margin-bottom: 10px;
+        }
+
+        .projects li a {
+            display: block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .projects li a:hover {
+            background-color: #0056b3;
+        }
+
+        .description {
+            display: none; /* Initially hide description */
         }
     </style>
 </head>
@@ -35,15 +92,42 @@
         <h1>Tri Pham Portfolio</h1>
     </header>
     <main>
-        <h2>Mission</h2>
-        <p>Detail-oriented Software Engineer with a Bachelor of Science in Computer Science, specializing in system integration and automation. Adaptable to evolving security landscapes and committed to continuous learning in software development and security practices.</p>
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/WilliamPatton850/The-Board-of-Trivia" target="_blank">Pensatrivia Game</a></li>
-            <li><a href="" target="_blank">System Integration: US water and waste water system</a></li>
-            <li><a href="" target="_blank">SpellChecker</a></li>
-            <li><a href="" target="_blank">TCP Weather Alert System</a></li>
+        <!-- Profile picture -->
+        <img class="profile-image" src="https://media.licdn.com/dms/image/D4E03AQGcgrJpfVqJ1A/profile-displayphoto-shrink_800_800/0/1684805395696?e=1718236800&v=beta&t=IJ1gvXs2jT9PHV-oLHJAf9BRvhcCl2yQDHDTsePd_wA" alt="Tri Pham">
+
+        <!-- Mission description -->
+        <div class="mission">
+            <h2>Mission</h2>
+            <p>My mission as a computer science graduate is to continually solve problems and create impactful solutions as I progress within the industry. My experiences as a baggage handler have taught me valuable lessons in improving my work ethic, collaborating effectively with others, and meeting the demands of the job. I am seeking a position that challenges me and brings me the same joy I experienced in my early childhood. I am a dedicated and hardworking individual, eager to learn and capable of collaborating with anyone. </p>
+        </div>
+
+        <!-- Project description -->
+        <h2>Memorable Projects</h2>
+        <ul class="projects">
+            <li><a href="https://github.com/WilliamPatton850/The-Board-of-Trivia" target="_blank">Pensatrivia</a></li>
+            <li><a href="#" onclick="toggleDescription(event)">System Integration: Cybersecurity in U.S. Water and Wastewater Systems</a>
+                <div class="description">
+                    <p>The project "System Integration: US Water and Wastewater System" is a comprehensive initiative aimed at safeguarding the critical infrastructure of water and wastewater systems (WWS) across the United States. These systems are vital components of the nation's infrastructure, providing essential services such as safe drinking water provision and wastewater treatment. Recognizing the significance of these systems to national security, public health, and environmental well-being, the project focuses on enhancing their resilience against potential threats, particularly cyber attacks.
+                        At the heart of the project lies the integration of Supervisory Control and Data Acquisition (SCADA) systems with existing water and wastewater infrastructure. SCADA systems are pivotal in monitoring and controlling various processes within WWS, ensuring efficient operation and compliance with regulatory standards. However, their integration also introduces vulnerabilities, making them potential targets for cyber threats that could disrupt operations and pose significant risks to society and the environment.
+                        The project aims to address these vulnerabilities by developing and implementing robust cybersecurity measures tailored specifically to SCADA-integrated WWS. Through a combination of advanced technologies, best practices, and strategic partnerships, the project seeks to mitigate cyber risks and enhance the overall security posture of water and wastewater infrastructure nationwide.</p>
+                </div>
+            </li>
+            <li><a href="https://github.com/Pham2000/Spell-checker" target="_blank">SpellChecker</a></li>
+            <li><a href="#" onclick="toggleDescription(event)">Weather Alert System</a>
+                <div class="description">
+                    <p>
+                        The project involved the development of a resilient C++ TCP client-server program tailored for delivering real-time weather alerts. This solution encompassed user-friendly functionalities enabling the customization of alert preferences and facilitating seamless communication. The endeavor was characterized by collaborative efforts within a multidisciplinary team, ensuring alignment with both technical specifications and user experience requisites, thereby enhancing the overall effectiveness and usability of the system.</p>
+                </div>
+            </li>
         </ul>
     </main>
+
+    <script>
+        function toggleDescription(event) {
+            event.preventDefault();
+            var description = event.target.nextElementSibling;
+            description.style.display = description.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
 </body>
 </html>
