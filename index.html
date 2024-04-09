@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tri Pham Portfolio</title>
     <style>
-        /* Reset */
         *,
         *::before,
         *::after {
@@ -18,16 +17,18 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background-color: #f4f4f4;
+            background-color: #f4f4f4; 
             color: #333;
             margin: 0;
             padding: 0;
+            background-image: url(https://storage.needpix.com/rsynced_images/space-2901400_1280.jpg);
+            background-position: auto;
         }
 
         /* Header */
         header {
-            background-color: #333;
-            color: #fff;
+            background: black;
+            color: aqua;
             padding: 20px;
             text-align: center;
         }
@@ -50,7 +51,7 @@
         }
 
         /* Mission*/
-        .mission {
+        .aboutme {
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
@@ -67,6 +68,14 @@
             margin-bottom: 30px;
         }
 
+        /*Project head */
+        .projectsHead {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
         /* Projects */
         .projects {
             list-style: none;
@@ -93,7 +102,20 @@
 
         .description {
             display: none; /* hide description */
+            color: #fff;
         }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-top: 2px solid #fff; 
+            background-image: url('https://t3.ftcdn.net/jpg/01/82/12/18/360_F_182121833_zKJjX6nLyUwNVTBzJNYZOlRyxPa3Hvz7.jpg');
+            background-size: auto;
+        }
+
     </style>
 </head>
 <body>
@@ -105,19 +127,22 @@
         <img class="profile-image" src="https://media.licdn.com/dms/image/D4E03AQGcgrJpfVqJ1A/profile-displayphoto-shrink_800_800/0/1684805395696?e=1718236800&v=beta&t=IJ1gvXs2jT9PHV-oLHJAf9BRvhcCl2yQDHDTsePd_wA" alt="Tri Pham">
 
         <!-- Mission description -->
-        <div class="mission">
-            <h2>Mission</h2>
-            <p>Hi my name is Tri Pham, my mission to advance within the ever-evolving landscape of the tech industry, my aim is to continually refine my coding skills and broaden my technical expertise. Driven by a passion for innovation and a commitment to excellence, I aspire to contribute meaningfully to transformative projects and initiatives. Embracing a growth mindset, I am dedicated to ongoing learning and development, seeking out opportunities to enhance my coding proficiency and expand my knowledge base. With each challenge encountered, I endeavor to emerge not only as a better coder but as a more versatile and adaptable technologist, poised to make significant strides in shaping the future of technology</p>
+        <div class="aboutme">
+            <h2>About Me</h2>
+            <p>Hi, my name is Tri Pham. I graduated from the University of West Florida in 2023. I was born in Vietnam, and during my free time, I enjoy indulging myself in anime or improving my problem-solving skills through LeetCode</p>
         </div>
 
         <!-- Experience -->
         <div class="experience">
-            <h2>Experience</h2>
-            <p> My professional background is rooted in the dynamic field of the airlines industry, where I have served as a baggage handler. This experience has honed my ability to navigate complex logistical challenges and operate within fast-paced environments, highlighting my adaptability and resilience. As a recent Computer Science graduate, I am excited to transition my skills and knowledge into the technology sector, where I can leverage my problem-solving abilities and passion for innovation to contribute meaningfully to cutting-edge projects and advancements. I am eager to explore opportunities that align with my technical expertise and offer avenues for continuous learning and growth</p>
+            <h2>My Experiences</h2>
+            <p>With a diverse background, I bring valuable experience to the table. Currently, I work as a ramp agent, navigating the aviation environment with precision. Previously, I was a full-time student and project intern, honing practical and project management skills. Before that, I worked as a librarian assistant, fostering organization and information sharing. Additionally, I excelled as a nail technician, demonstrating attention to detail and dedication. Each role has contributed uniquely to my skill set, fostering adaptability and a comprehensive understanding of different industries.</p>
         </div>
 
         <!-- Project description -->
+        <div class = "projectsHead">
         <h2>Memorable Projects</h2>
+        </div>
+
         <ul class="projects">
             <li><a href="https://github.com/WilliamPatton850/The-Board-of-Trivia" target="_blank">Pensatrivia</a></li>
             <li><a href="#" onclick="toggleDescription(event)">System Integration: Cybersecurity in U.S. Water and Wastewater Systems</a>
@@ -136,6 +161,9 @@
             </li>
         </ul>
     </main>
+
+    <!-- Bottom -->
+    <div class="bottom-border"></div>
 
     <script>
         function toggleDescription(event) {
